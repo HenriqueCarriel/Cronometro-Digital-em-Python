@@ -4,7 +4,7 @@
 # timer = para manipular o tempo usando métodos de strings
 # tkinter = para a parte gráfica (GUI) do aplicativo
 
-from tkinter import*
+from tkinter import *
 import tkinter
 
 #cores do projeto
@@ -15,7 +15,7 @@ cor4 = "#eb463b" # red / vermelha
 cor5 = "#dedcdc" # gray / cinza
 cor6 = "#3080f0" # blue / azul
 
-# Tamanho da aplicação
+# Tamanho da aplicação / Application size
 janela = Tk()
 janela.title("Cronômetro 3,2,1...")
 janela.geometry("310x180")
@@ -28,14 +28,14 @@ tempo = "00:00:00"
 count = -5
 run = False
 
-# função iniciar
+# função iniciar / start function
 def iniciar():
     def valor():
         if run:
             global count
             global tempo
 
-            # antes de começar
+            # antes de começar / before starting
             if count <= -1:
                 inicio = "começando em" + str(abs(count))
                 label_time['text'] = inicio
@@ -68,29 +68,29 @@ def iniciar():
                 count += 1
             valor()
 
-# função para iniciar o cronometro
+# função para iniciar o cronômtro / function to start the stopwatch
 def start():
     global run
     run = True
     iniciar()
 
-# função para pausar o cronometro
+# função para pausar o cronômetro / function to pause the stopwatch
 def pause():
     global run
     run = False
 
-# função para reiniciar o cronometro
+# função para reiniciar o cronômetro / function to reset the timer
 def reset():
     global count
     count = -5
 
-#Se estiver pausado irá reiniciar do zero
+# Se estiver pausado irá reiniciar do zero / If it is paused it will restart from scratch
 if run == False:
     global tempo
     tempo = "00:00:00"
     label_time['text'] = tempo
 
-# Se nao estiver pausado ira continuar onde parou antes
+# Se nao estiver pausado irá continuar onde parou antes / If it is not paused it will continue where it left off before
 else:
     label_time['font'] = "ivy 20"
     label_time['font'] = "Iniciando..."
