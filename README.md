@@ -1,5 +1,7 @@
 Para o projeto Cronômetro em Python foi necessário: 
 
+Inicialmente um projeto bem simples, mas que utilizam diversas funções e métodos especificos em seu código-fonte, aguardem para novos projetos.
+
 -Conhecimento em Python
 -Conhecimento em lógica de programação
 -Biliotecas usadas - time/tkinter
